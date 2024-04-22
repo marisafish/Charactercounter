@@ -29,11 +29,17 @@ border-radius: 4px;
 以下に文字を入れて下さい。
 </p>
 <textarea cols="85%" rows="40%" onkeyup="ShowLength(value);"></textarea>
+<input type="button"  value="クリア" onclick="clearTextarea()" />
 <p id="inputlength">0文字</p>
 <script>
 function ShowLength( str ) {
    document.getElementById("inputlength").innerHTML = str.length + "文字";
 }
+
+function clearTextarea() {
+	var textareaForm = document.getElementById("form2");
+  textareaForm.value = '';
+    }    
 </script>
 </body>
 </html>
