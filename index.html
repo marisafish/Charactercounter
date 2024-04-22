@@ -1,1 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@300;400;500;700&display=swap");
 
+body{
+    background-color: #00FFBC;
+    background-repeat: no-repeat;
+    background-position:60% 60%;
+    background-size:cover;
+}
+
+* {
+font-family: 'Zen Maru Gothic';
+}
+
+textarea {
+border-radius: 4px;
+}
+</style>
+</head>
+<body>
+<h1>文字数カウンター</h1>
+<p>
+以下に文字を入れて下さい。
+</p>
+<textarea cols="24" rows="3" onkeyup="ShowLength(value);"></textarea>
+<p id="inputlength">0文字</p>
+<script>
+function ShowLength( str ) {
+   document.getElementById("inputlength").innerHTML = str.length + "文字";
+}
+</script>
+</body>
+</html>
